@@ -1,23 +1,23 @@
 :root {
-  --color-text: #999;
-  --color-text-dimmed: #666;
-  --color-text-bright: #fff;
-  --color-background: #000;
+  --color-text: #fa4444; /* what text is this */
+  --color-text-dimmed: #c6c4c4; /* what text is this */
+  --color-text-bright: #fde401; /* what text is this initial color #fff */
+  --color-background: #ec7272; /* what color is this initial color #000 */
 
   --font-primary: "Roboto Condensed";
   --font-secondary: "Roboto";
 
-  --font-size: 20px;
+  --font-size: 18px;
   --font-size-xsmall: 0.75rem;
   --font-size-small: 1rem;
   --font-size-medium: 1.5rem;
   --font-size-large: 3.25rem;
   --font-size-xlarge: 3.75rem;
 
-  --gap-body-top: 60px;
-  --gap-body-right: 60px;
-  --gap-body-bottom: 60px;
-  --gap-body-left: 60px;
+  --gap-body-top: 40px; /* change to 40 from 60 */
+  --gap-body-right: 40px; /* change to 40 from 60 */
+  --gap-body-bottom: 40px; /* change to 40 from 60 */
+  --gap-body-left: 40px; /*  30 moved cal events to right*/
 
   --gap-modules: 30px;
 }

@@ -12,16 +12,16 @@ Module.register("clock", {
 		displayType: "digital", // options: digital, analog, both
 
 		timeFormat: config.timeFormat,
-		timezone: null,
+		timezone: "America/Denver",
 
 		displaySeconds: true,
 		showPeriod: true,
 		showPeriodUpper: false,
-		clockBold: false,
+		clockBold: true,
 		showDate: true,
 		showTime: true,
-		showWeek: false,
-		dateFormat: "dddd, LL",
+		showWeek: true,
+		dateFormat: "dddd, MMMM, YYYY, NN",
 
 		/* specific to the analog clock */
 		analogSize: "200px",
@@ -30,10 +30,10 @@ Module.register("clock", {
 		analogShowDate: "top", // OBSOLETE, can be replaced with analogPlacement and showTime, options: false, 'top', or 'bottom'
 		secondsColor: "#888888",
 
-		showSunTimes: false,
-		showMoonTimes: false,
-		lat: 47.630539,
-		lon: -122.344147
+		showSunTimes: true,
+		showMoonTimes: true,
+		lat: 40.2675,
+		lon: -111.7009
 	},
 	// Define required scripts.
 	getScripts: function () {
@@ -114,11 +114,11 @@ Module.register("clock", {
 		const weekWrapper = document.createElement("div");
 
 		// Style Wrappers
-		dateWrapper.className = "date normal medium";
+		dateWrapper.className = "date normal large";
 		timeWrapper.className = "time bright large light";
 		secondsWrapper.className = "seconds dimmed";
-		sunWrapper.className = "sun dimmed small";
-		moonWrapper.className = "moon dimmed small";
+		sunWrapper.className = "sun dimmed medium";
+		moonWrapper.className = "moon dimmed medium";
 		weekWrapper.className = "week dimmed medium";
 
 		// Set content of wrappers.
@@ -149,7 +149,7 @@ Module.register("clock", {
 
 		if (this.config.displayType !== "analog" && this.config.showTime) {
 			timeWrapper.innerHTML = timeString;
-			secondsWrapper.innerHTML = now.format("ss");
+			secondsWrapper.innerHTML = now.format("SS");
 			if (this.config.showPeriodUpper) {
 				periodWrapper.innerHTML = now.format("A");
 			} else {
